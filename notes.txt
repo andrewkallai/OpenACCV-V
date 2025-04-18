@@ -1,0 +1,1 @@
+xargs -a list.txt -I {} mv {} new_tests
