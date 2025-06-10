@@ -6,21 +6,18 @@
 !The first settings are the compiler settings.  Just set this to whatever you want to be invoked as the compiler
 !If you don't have these set up in your path, you can also give full paths to be used
 
-CC:gcc
-CPP:g++
-FC:gfortran
+!CC:gcc
+!CPP:g++
+FC:ftn
 
 !In addition to these, you will want to add some flags.
 !Some of the features in the infrastructure use C Pre-Processor directives, so please make sure that is enabled.
 !If enabling them is impossible, the infrastructure will be unable to detect which portions of the tests are causing
 !compilation/runtime errors. 
 
-!CCFlags:-fast -acc=gpu -lm 
-!CPPFlags:-fast -acc=gpu -lm 
-!FCFlags:-fast -acc=gpu -lm 
-CFlags:-fopenacc -cpp -lm -foffload='-lm'
-CPPFlags:-fopenacc -cpp -lm -foffload='-lm'
-FCFlags:-fopenacc -cpp -lm -foffload='-lm'
+!CCFlags:-fopenacc -cpp -lm -foffload='-lm'
+!CPPFlags:-fopenacc -cpp -lm -foffload='-lm'
+FCFlags:-h acc,noomp -h msgs
 
 !Below are a few more things that should probably be specified.  The script will do its best, but sometimes it will need some help.
 !TestDir:/home/<user>/OpenACCV-V/Tests
@@ -179,6 +176,6 @@ ResultsFormat:json
 
 !RuntimePrefix:<prefix>
 
-!This can be used to test host-fallback on gcc for example with RuntimePrefix:ACC_DEVICE_TYPE=None
+iThis can be used to test host-fallback on gcc for example with RuntimePrefix:ACC_DEVICE_TYPE=None
 
 RunAllTests:True

@@ -121,7 +121,7 @@ FCFlags:-fast -acc=gpu -lm
 !If you would like to specify a timeout on the shell operations (both compilation and runtime) you can 
 !do so with the following (specified in seconds):
 
-!Timeout:10
+Timeout:120
 
 !If you would like to run the tests without trying to detect causes of runtime errors and 
 !compilation errors you can use the following:
