@@ -27,7 +27,7 @@ def compare_test_results(json_dicts, file_names, names_only=False):
             if len(set(results)) > 1:
                 mismatched_tests.add(test_name)
                 if not names_only:
-                    print(f"\n❌ Mismatch in test: {test_name}, Config {idx}")
+                    print(f"\n*** Mismatch in test: {test_name}, Config {idx}")
                     for fname, (c, r) in zip(file_names, results):
                         print(f"  {fname}: Compilation={c}, Runtime={r}")
     
