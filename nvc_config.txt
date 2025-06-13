@@ -17,7 +17,7 @@ FC:nvfortran
 
 CCFlags:-fast -acc=gpu -lm 
 CPPFlags:-fast -acc=gpu -lm 
-FCFlags:-fast -acc=gpu -lm 
+FCFlags:-fast -acc=gpu -lm -Mpreprocess
 !CPPFlags:-fopenacc -cpp -lm -foffload='-lm'
 !FCFlags:-fopenacc -cpp -lm -foffload='-lm'
 

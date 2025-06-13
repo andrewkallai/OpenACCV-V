@@ -17,7 +17,7 @@ FC:ftn
 
 !CCFlags:-fopenacc -cpp -lm -foffload='-lm'
 !CPPFlags:-fopenacc -cpp -lm -foffload='-lm'
-FCFlags:-h acc,noomp -h msgs
+FCFlags:-h acc,noomp -h msgs -eP
 
 !Below are a few more things that should probably be specified.  The script will do its best, but sometimes it will need some help.
 !TestDir:/home/<user>/OpenACCV-V/Tests
