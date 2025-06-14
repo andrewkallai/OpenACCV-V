@@ -6,16 +6,18 @@
 !The first settings are the compiler settings.  Just set this to whatever you want to be invoked as the compiler
 !If you don't have these set up in your path, you can also give full paths to be used
 
-!CC:gcc
-!CPP:g++
-!FC:gfortran
+CC:nvc
+CPP:nvc++
+FC:nvfortran
 
 !In addition to these, you will want to add some flags.
 !Some of the features in the infrastructure use C Pre-Processor directives, so please make sure that is enabled.
 !If enabling them is impossible, the infrastructure will be unable to detect which portions of the tests are causing
 !compilation/runtime errors. 
 
-!CCFlags:-fopenacc -cpp -lm -foffload='-lm'
+CCFlags:-fast -acc=gpu -lm 
+CPPFlags:-fast -acc=gpu -lm 
+FCFlags:-fast -acc=gpu -lm -Mpreprocess
 !CPPFlags:-fopenacc -cpp -lm -foffload='-lm'
 !FCFlags:-fopenacc -cpp -lm -foffload='-lm'
 
@@ -119,7 +121,7 @@
 !If you would like to specify a timeout on the shell operations (both compilation and runtime) you can 
 !do so with the following (specified in seconds):
 
-!Timeout:10
+Timeout:120
 
 !If you would like to run the tests without trying to detect causes of runtime errors and 
 !compilation errors you can use the following:
@@ -128,7 +130,7 @@
 
 !To specify the output format, you can use the following with the following values (json, html, txt):
 
-!ResultsFormat:json
+ResultsFormat:json
 
 !If you specify the html output format, the file that is output will still be in json format.  The output file should
 !afterward be placed into the directory results_template and renamed to results.json.  The results.html can then be
@@ -178,4 +180,4 @@
 
 !This can be used to test host-fallback on gcc for example with RuntimePrefix:ACC_DEVICE_TYPE=None
 
-!RunAllTests:True
+RunAllTests:True

@@ -1,0 +1,2 @@
+xargs -a list.txt -I {} mv {} new_tests
+python3 infrastructure.py -c=init_config.txt -o=results.json
