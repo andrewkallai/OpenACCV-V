@@ -1,4 +1,4 @@
-nvcc versus gnu
+nvhpc versus gnu
 
 acc_copyin_async.c
 acc_copyin_with_len.F90
@@ -52,35 +52,25 @@ atomic_expr_divided_x.F90
 atomic_expr_divided_x_end.F90
 atomic_expr_minus_x.F90
 atomic_expr_minus_x_end.F90
-atomic_structured_expr_multiply_x_assign.c
-atomic_structured_multiply_equals_assign.c
-atomic_structured_x_multiply_expr_assign.c
 atomic_update_expr_divided_x.F90
 atomic_update_expr_divided_x_end.F90
 atomic_update_expr_minus_x.F90
 atomic_update_expr_minus_x_end.F90
 data_copyout_reference_counts.F90
-declare_copyin.c
 declare_copyin.cpp
 declare_create.F90
-declare_create.c
 declare_create.cpp
 declare_function_scope_copy.F90
-declare_function_scope_copy.c
 declare_function_scope_copy.cpp
 declare_function_scope_copyin.F90
-declare_function_scope_copyin.c
 declare_function_scope_copyin.cpp
 declare_function_scope_copyout.F90
-declare_function_scope_copyout.c
 declare_function_scope_copyout.cpp
 declare_function_scope_create.F90
-declare_function_scope_create.c
 declare_function_scope_create.cpp
 declare_function_scope_deviceptr.c
 declare_function_scope_deviceptr.cpp
 declare_function_scope_present.F90
-declare_function_scope_present.c
 declare_function_scope_present.cpp
 enter_data_if.F90
 exit_data.F90
@@ -93,45 +83,31 @@ kernels_copyout.F90
 kernels_create.F90
 kernels_default_copy.F90
 kernels_if.F90
-kernels_if.c
 kernels_loop_reduction_bitor_general.c
 kernels_loop_reduction_bitor_general.cpp
-kernels_loop_vector_blocking.c
-kernels_loop_worker_blocking.c
-parallel_create_zero.c
 parallel_create_zero.cpp
 parallel_default_copy.F90
-parallel_implicit_data_attributes.c
 parallel_implicit_data_attributes.cpp
-parallel_loop_reduction_add_general_type_check_pt2.c
 parallel_loop_reduction_add_general_type_check_pt2.cpp
-parallel_loop_reduction_add_loop_type_check_pt1.c
 parallel_loop_reduction_max_general.c
 parallel_loop_reduction_max_general.cpp
-parallel_loop_vector_blocking.c
-parallel_loop_worker_blocking.c
-parallel_reduction.c
 parallel_reduction.cpp
-routine_gang.c
 routine_gang.cpp
 serial_default_copy.F90
 serial_firstprivate.c
 serial_firstprivate.cpp
 serial_if.F90
-serial_implicit_data_attributes.c
 serial_implicit_data_attributes.cpp
 serial_loop_gang_blocking.F90
-serial_loop_gang_blocking.c
 serial_loop_reduction_max_general.F90
 serial_loop_reduction_max_general.c
 serial_private.F90
-serial_private.c
 serial_private.cpp
 set_device_type.c
 set_device_type.cpp
 set_device_type_num.F90
 
-nvcc versus cray
+nvhpc versus cce
 
 acc_copyin_with_len.F90
 acc_delete_async.F90
