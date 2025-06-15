@@ -19,13 +19,14 @@ int test1() {
     
     real_t *list[3] = {a, b, c};
 
-   // #pragma acc data copyin(list[0:3][0:n])
+    #pragma acc enter data create(list[0:3])
+    #pragma acc update device(list[0:3])
     {
         int queues[10];
         for (int i = 0; i < 2; i++)
         {
             // Do some unbalanced operation on several queues
-            #pragma acc enter data copyin(list[i]) async(i)
+            #pragma acc enter data copyin(list[i][0:n]) async(i)
             
             // Put the queue number in the queues list
             queues[i] = i;
