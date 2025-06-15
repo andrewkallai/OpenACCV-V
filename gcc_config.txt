@@ -18,7 +18,7 @@ FC:gfortran
 !CCFlags:-fast -acc=gpu -lm 
 !CPPFlags:-fast -acc=gpu -lm 
 !FCFlags:-fast -acc=gpu -lm 
-CFlags:-fopenacc -cpp -lm -foffload='-lm'
+CCFlags:-fopenacc -cpp -lm -foffload='-lm'
 CPPFlags:-fopenacc -cpp -lm -foffload='-lm'
 FCFlags:-fopenacc -cpp -lm -foffload='-lm'
 
